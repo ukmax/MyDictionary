@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block body %}
+  <div>
+  <h1>Мой словарь</h1>
+  <form method="post" class="my-5">
+      <input
+        type="text"
+        id="input-english-word-id"
+        name="english-word"
+        placeholder="english"
+        required
+      >
+    <input
+        type="text"
+        id="input-russian-word-id"
+        placeholder="russian"
+        name="russian-word"
+        required
+      >
+      <input type="submit" value="Добавить слово">
+    </form>
+  </div>
+  <div>
+  {% if words %}
+    <ul>
+      {% for word in words %}
+        <li>{{ word.eng_word}} - {{ word.rus_word }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <h3>Пока нет записей</h3>
+  {% endif %}
+</div>
+{% endblock %}
