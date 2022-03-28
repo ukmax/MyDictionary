@@ -1,10 +1,9 @@
 from os import getenv
 
-# SQLALCHEMY_DATABASE_URI = getenv(
-#     "SQLALCHEMY_DATABASE_URI",
-#     "postgresql+pg8000://postgres:password@localhost/mydictionary",
-# )
-SQLALCHEMY_DATABASE_URI = "postgresql+pg8000://postgres:password@localhost/mydictionary"
+SQLALCHEMY_DATABASE_URI = getenv(
+    "SQLALCHEMY_DATABASE_URI",
+    "postgresql+pg8000://postgres:password@localhost/mydictionary",
+)
 
 
 class Config:

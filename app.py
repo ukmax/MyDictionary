@@ -3,7 +3,6 @@ from flask import Flask
 from flask_migrate import Migrate
 from views.index import index_bp
 from models.database import db
-import config
 
 app = Flask(__name__)
 
@@ -17,4 +16,4 @@ app.register_blueprint(index_bp)
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host="0.0.0.0")
